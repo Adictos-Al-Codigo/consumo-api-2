@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="30dp">
+    android:padding="30dp"
+    android:background="@drawable/background_gradient">
 
     <LinearLayout
         android:id="@+id/editTextLayout"
@@ -113,7 +114,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -143,7 +145,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -183,6 +186,7 @@
         android:layout_height="wrap_content"
         android:text="Mostrar"
         android:textColor="#fff"
+        app:iconTint="#FF1500"
         android:textSize="18dp"
         android:textStyle="bold"
         android:backgroundTint="#97CA37"
@@ -203,10 +207,11 @@
         android:text="Ocultar"
         app:icon="@drawable/hide"
         app:iconSize="45dp"
+        app:iconTint="#000"
         android:textColor="#fff"
         android:textSize="18dp"
         android:textStyle="bold"
-        android:backgroundTint="#95E105"
+        android:backgroundTint="#32C17E"
         app:layout_constraintTop_toBottomOf="@id/table_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/mostrar"

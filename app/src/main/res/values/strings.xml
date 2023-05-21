@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">consumo_api2</string>
+    <string name="app_name">Consumo de Api Pública con Retrofit</string>
     <string name="id_comentario">N° de Id</string>
 </resources>
