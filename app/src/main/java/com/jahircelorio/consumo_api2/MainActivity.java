@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.Toast;
 
 import com.jahircelorio.consumo_api2.interfaces.ComentarioApi;
@@ -23,6 +24,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     EditText txtid, txtid_comentario, txtname, txtemail, txtbody;
+
+    TableLayout tableLayout;
     Button mostrar;
 
     @Override
@@ -36,12 +39,20 @@ public class MainActivity extends AppCompatActivity {
         txtemail = findViewById(R.id.email);
         txtbody = findViewById(R.id.body);
         mostrar = findViewById(R.id.mostrar);
+        tableLayout = findViewById(R.id.table_layout);
+        tableLayout.setVisibility(View.INVISIBLE);
+
         mostrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 buscar(txtid_comentario.getText().toString());
+                tableLayout.setVisibility(View.VISIBLE);
             }
         });
+
+
+
+
     }
 
     private void buscar(String codigo){

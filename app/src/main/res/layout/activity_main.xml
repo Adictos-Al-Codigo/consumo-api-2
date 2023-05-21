@@ -4,33 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="30dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="30dp">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/id_comentario" />
+            android:hint="Buscar"
+            app:startIconDrawable="@drawable/ic_search_24dp"
+            app:startIconContentDescription="Buscar"
+            >
 
-        <EditText
-            android:id="@+id/id_comentario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="text"
-            android:text="" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/id_comentario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingresa el Código de Comentario"
+                />
 
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 
     <TableLayout
+        android:id="@+id/table_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:translationY="50dp">
@@ -39,85 +45,131 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ID" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField2"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Código"
+                    app:startIconContentDescription="Código de Comentario"
+                    app:startIconDrawable="@drawable/code">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="name" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre"
+                    app:startIconDrawable="@drawable/ic_search_24dp"
+                    app:startIconContentDescription="Nombre de Comentario"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="email" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo"
+                    app:startIconDrawable="@drawable/ic_search_24dp"
+                    app:startIconContentDescription="Email"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <TextView
-                android:id="@+id/textView8"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="body" />
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/body"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Descripción"
+                    app:startIconDrawable="@drawable/ic_search_24dp"
+                    app:startIconContentDescription="Descripción"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:translationX="150dp">
-
-            <Button
-                android:id="@+id/mostrar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="MOSTRAR" />
-        </TableRow>
     </TableLayout>
+
+    <Button
+        android:id="@+id/mostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MOSTRAR"
+        android:translationX="150dp"
+        android:translationY="250dp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="120dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
