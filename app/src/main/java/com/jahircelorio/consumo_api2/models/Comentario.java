@@ -1,6 +1,6 @@
 package com.jahircelorio.consumo_api2.models;
 
-public class object {
+public class Comentario {
     private String id, name, email, body;
 
     public String getId() {

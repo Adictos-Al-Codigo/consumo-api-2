@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">consumo_api2</string>
+    <string name="id_comentario">N° Comentario</string>
 </resources>

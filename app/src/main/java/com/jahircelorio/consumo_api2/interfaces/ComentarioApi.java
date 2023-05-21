@@ -1,10 +1,12 @@
 package com.jahircelorio.consumo_api2.interfaces;
 
+import com.jahircelorio.consumo_api2.models.Comentario;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
-public interface object {
+public interface ComentarioApi {
     @GET("https://jsonplaceholder.typicode.com/comments/{id}")
-    public Call<object> findCall(@Path("id") String id);
+    public Call<Comentario> find(@Path("id") String id);
 }
