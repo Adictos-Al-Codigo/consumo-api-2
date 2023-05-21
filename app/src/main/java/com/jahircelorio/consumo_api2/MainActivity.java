@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     EditText txtid, txtid_comentario, txtname, txtemail, txtbody;
 
     TableLayout tableLayout;
-    Button mostrar;
+    Button mostrar, ocultar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +39,10 @@ public class MainActivity extends AppCompatActivity {
         txtemail = findViewById(R.id.email);
         txtbody = findViewById(R.id.body);
         mostrar = findViewById(R.id.mostrar);
+        ocultar = findViewById(R.id.ocultar);
         tableLayout = findViewById(R.id.table_layout);
-        tableLayout.setVisibility(View.INVISIBLE);
+        this.OcultarBoton();
+
 
         mostrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +52,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        ocultar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OcultarBoton();
+            }
+        });
 
 
 
@@ -81,5 +90,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"Error de Red",Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void OcultarBoton(){
+        tableLayout.setVisibility(View.INVISIBLE);
     }
 }
